@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tomato Information</title>
+  <style>
+    /* ===== General Reset ===== */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Segoe UI", sans-serif; }
+    body { background: var(--bg-color); color: var(--text-color); transition: all 0.3s ease; line-height: 1.6; }
+    :root { --bg-color: #f8fdf8; --card-color: #ffffff; --text-color: #222; --accent-color: #4CAF50; }
+    body.dark { --bg-color: #1e1e2f; --card-color: #2a2a3d; --text-color: #f5f5f5; --accent-color: #4CAF502; }
+    header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: var(--card-color); box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 0 0 12px 12px; }
+    header h1 { font-size: 1.8rem; color: var(--accent-color); }
+    .toggle-btn { cursor: pointer; padding: 0.5rem 1rem; background: var(--accent-color); color: white; border: none; border-radius: 6px; transition: 0.3s; }
+    .toggle-btn:hover { opacity: 0.9; }
+    .container { max-width: 1200px; margin: 2rem auto; padding: 1rem; }
+    .intro { text-align: center; margin-bottom: 2rem; }
+    .intro img { width: 350px; height: auto; border-radius: 16px; margin-bottom: 1rem; box-shadow: 0 8px 18px rgba(0,0,0,0.15); transition: transform 0.3s ease; }
+    .intro img:hover { transform: scale(1.05); }
+    .intro h2 { font-size: 2rem; color: var(--accent-color); margin-bottom: 0.5rem; }
+    .info-section { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 1.5rem; }
+    .card { background: var(--card-color); padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
+    .card:hover { transform: translateY(-5px); }
+    .card h3 { margin-bottom: 1rem; color: var(--accent-color); font-size: 1.3rem; }
+    .card ul { list-style: none; }
+    .card ul li { margin-bottom: 0.6rem; }
+    footer { text-align: center; padding: 1rem; margin-top: 2rem; font-size: 0.9rem; background: var(--card-color); border-radius: 12px 12px 0 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🍅 Tomato Information</h1>
+    <button class="toggle-btn" onclick="toggleMode()">🌙 Dark Mode</button>
+  </header>
+
+  <div class="container">
+    <div class="intro">
+      <img src="/Products/3/Tomato.webp" alt="Tomato">
+      <h2>Complete Tomato Insights</h2>
+      <p>Essential information for farmers, retailers, wholesalers, and consumers.</p>
+    </div>
+
+    <div class="info-section">
+      <div class="card">
+        <h3>👨‍🌾 For Farmers</h3>
+        <ul>
+          <li>💰 Market Price: ₹1500 – ₹2500 per quintal (highly fluctuates)</li>
+          <li>🌱 Best Soil: Well-drained loamy soil, pH 6.0–7.5</li>
+          <li>☀️ Weather: Warm climate (20–30°C)</li>
+          <li>💧 Water Requirement: Moderate, 600–800 mm</li>
+          <li>🌾 Growing Season: Kharif, Rabi & Summer</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>🏪 For Retailers</h3>
+        <ul>
+          <li>💰 Avg Retail Price: ₹20 – ₹50/kg (seasonal variation)</li>
+          <li>✅ Quality: Graded by size, color & firmness</li>
+          <li>📦 Storage: Cold storage at 12–15°C</li>
+          <li>📊 Demand: Consistently high</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>🚚 For Wholesalers</h3>
+        <ul>
+          <li>📍 High Production States: Andhra Pradesh, Maharashtra, MP, Karnataka</li>
+          <li>🌍 Distribution: Supplied across India & Gulf countries</li>
+          <li>⚖️ Bulk Deals: 5–50 ton daily lots</li>
+          <li>📦 Packaging: Plastic crates & gunny bags</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>👩‍👩‍👦 For Consumers</h3>
+        <ul>
+          <li>🗓️ Harvest Time: 90–110 days after transplanting</li>
+          <li>📅 Shelf Life: 7–15 days (depends on storage)</li>
+          <li>✅ Quality: Lycopene content, firm skin</li>
+          <li>🍲 Uses: Curry, salad, ketchup, soup, processed foods</li>
+          <li>🥗 Health: Rich in Vitamin C, antioxidants & lycopene</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <footer>🍅 Powered by FarmX | Smart Agriculture Platform</footer>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle("dark");
+      const btn = document.querySelector(".toggle-btn");
+      btn.textContent = document.body.classList.contains("dark") ? "☀️ Light Mode" : "🌙 Dark Mode";
+    }
+  </script>
+</body>
+</html>

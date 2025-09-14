@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mango Information</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Segoe UI", sans-serif; }
+    body { background: var(--bg-color); color: var(--text-color); transition: all 0.3s ease; line-height: 1.6; }
+    :root { --bg-color: #fefcf7; --card-color: #ffffff; --text-color: #222; --accent-color: #4CAF50; }
+    body.dark { --bg-color: #1e1e2f; --card-color: #2a2a3d; --text-color: #f5f5f5; --accent-color: #4CAF50; }
+    header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: var(--card-color); box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 0 0 12px 12px; }
+    header h1 { font-size: 1.8rem; color: var(--accent-color); }
+    .toggle-btn { cursor: pointer; padding: 0.5rem 1rem; background: var(--accent-color); color: white; border: none; border-radius: 6px; transition: 0.3s; }
+    .toggle-btn:hover { opacity: 0.9; }
+    .container { max-width: 1200px; margin: 2rem auto; padding: 1rem; }
+    .intro { text-align: center; margin-bottom: 2rem; }
+    .intro img { width: 350px; height: auto; border-radius: 16px; margin-bottom: 1rem; box-shadow: 0 8px 18px rgba(0,0,0,0.15); transition: transform 0.3s ease; }
+    .intro img:hover { transform: scale(1.05); }
+    .intro h2 { font-size: 2rem; color: var(--accent-color); margin-bottom: 0.5rem; }
+    .info-section { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 1.5rem; }
+    .card { background: var(--card-color); padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
+    .card:hover { transform: translateY(-5px); }
+    .card h3 { margin-bottom: 1rem; color: var(--accent-color); font-size: 1.3rem; }
+    .card ul { list-style: none; }
+    .card ul li { margin-bottom: 0.6rem; }
+    footer { text-align: center; padding: 1rem; margin-top: 2rem; font-size: 0.9rem; background: var(--card-color); border-radius: 12px 12px 0 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🥭 Mango Information</h1>
+    <button class="toggle-btn" onclick="toggleMode()">🌙 Dark Mode</button>
+  </header>
+
+  <div class="container">
+    <div class="intro">
+      <img src="/Products/4/Mango.jpg" alt="Mango">
+      <h2>Complete Mango Insights</h2>
+      <p>Essential information for farmers, retailers, wholesalers, and consumers.</p>
+    </div>
+
+    <div class="info-section">
+      <div class="card">
+        <h3>👨‍🌾 For Farmers</h3>
+        <ul>
+          <li>💰 Market Price: ₹2500 – ₹5000 per quintal (variety dependent)</li>
+          <li>🌱 Best Soil: Well-drained alluvial, pH 5.5–7.5</li>
+          <li>☀️ Weather: Tropical & subtropical (24–30°C)</li>
+          <li>💧 Water Requirement: 750–1200 mm annually</li>
+          <li>🌾 Season: Flowering Jan–Mar, Harvest Apr–Jun</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>🏪 For Retailers</h3>
+        <ul>
+          <li>💰 Avg Retail Price: ₹60 – ₹150/kg (variety & season)</li>
+          <li>✅ Quality: Aroma, sweetness, size & skin color</li>
+          <li>📦 Storage: Cold storage at 12–13°C</li>
+          <li>📊 Demand: Peak in summer, processed demand year-round</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>🚚 For Wholesalers</h3>
+        <ul>
+          <li>📍 Leading States: UP, Andhra Pradesh, Telangana, Maharashtra, Gujarat</li>
+          <li>🌍 Distribution: Export to Middle East, USA & EU</li>
+          <li>⚖️ Bulk Deals: 10–100 ton consignments</li>
+          <li>📦 Packaging: Wooden crates, corrugated boxes</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>👩‍👩‍👦 For Consumers</h3>
+        <ul>
+          <li>🗓️ Harvest Time: 100–150 days after flowering</li>
+          <li>📅 Shelf Life: 7–14 days fresh, longer in cold storage</li>
+          <li>✅ Popular Varieties: Alphonso, Dasheri, Kesar, Langra, Banganapalli</li>
+          <li>🥭 Uses: Fresh fruit, juice, pickles, desserts, pulp industry</li>
+          <li>💪 Health: Rich in Vitamin A, C & antioxidants</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <footer>🥭 Powered by FarmX | Smart Agriculture Platform</footer>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle("dark");
+      const btn = document.querySelector(".toggle-btn");
+      btn.textContent = document.body.classList.contains("dark") ? "☀️ Light Mode" : "🌙 Dark Mode";
+    }
+  </script>
+</body>
+</html>
